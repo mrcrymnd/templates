@@ -1,0 +1,29 @@
+h4 { padding: 1em 0em 1em 0em; }
+
+form.widget
+{
+	background-color: rgba(0,0,0,.03);
+	border: 1px solid rgba(0,0,0,.125);
+	border-radius: .25em;
+	padding: 1em;
+}
+
+.nav-tabs-global { margin: 0 0 1em 0; }
+.widget-search-filter { margin: 0 0 1em 0; }
+
+.widget-selection-tools
+{
+	border-bottom-right-radius: 0!important;
+	border-bottom-left-radius: 0!important;
+	background-color: #FFFF99!important;
+}
+
+#pills-tab, #pills-tabContent { margin: 1em 0em 1em 0em; }
+.bg-highlight { background-color: #FFFF99; }
+#carouselExampleCaptions { margin: 0em 0em 1em 0em; }
+.footer { margin: 1em 0em 0em 0em !important; }
+
+@media screen and (min-width: 1200px)
+{
+	.featurette-heading { margin: 4em 0em 0em 0em; }
+}
