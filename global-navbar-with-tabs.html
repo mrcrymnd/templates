@@ -12,6 +12,8 @@
 	
 		* { font-family: 'Open Sans', sans-serif; }
 		
+		a { color: #0056b3; }/*accessible blue*/
+		
 		h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
 		
 		h1.page-title { padding: .5em 0em .5em 0em; }
@@ -22,14 +24,22 @@
 			padding: 1em 0em 1em 0em;
 		}
 		
+		nav#three-section-tabs a.active {margin-bottom: -1px;} /*bottom border fix*/
+		
+		/* query pulls right-aligned user link back into left-aligned mobile vertical navigation menu */
 		@media only screen and (max-width: 991px)
 		{
-			li.ml-auto
-			{
-				margin-left: 0!important;
-				/* pulls right-aligned user link back into left-aligned mobile vertical navigation menu */
-			}
+			li.ml-auto { margin-left: 0!important; }
 		}
+		
+		/* query formats responsive tabs for mobile viewport */
+		@media only screen and (max-width: 575px)
+		{
+			nav#three-section-tabs { border: 0; }
+			nav#three-section-tabs .nav-link { border-radius: .25rem; }
+			nav#three-section-tabs .active { border: 1px solid #dee2e6; }
+		}
+		
 </style>
 	<title>Global Navigation with Tabs</title>
 </head>
@@ -49,7 +59,7 @@
 				<a class="dropdown-item" href="#">My Courses</a> <a class="dropdown-item" href="#">Administer</a> <a class="dropdown-item" href="#">Impersonate</a> 
 			</div>
 			</li>
-			<button type="button" class="btn btn-outline-primary">Sign Out</button> 
+			<li class="nav-item"> <a href="#"  class="btn btn-outline-primary btn-block">Sign Out</a> </li>
 		</ul>
 	</div>
 </nav>
@@ -58,10 +68,12 @@
 	<h6 class="course-title">
 		Course Title 
 	</h6>
-	<ul class="nav nav-tabs flex-column flex-md-row">
-		<a class="flex-md-fill text-md-center nav-link active" href="#">Collection</a> <a class="flex-md-fill text-md-center nav-link" href="#">Assignments</a> <a class="flex-md-fill text-md-center nav-link" href="#">Projects</a> 
-	</ul>
-	<h1 class="page-title">
+<nav id="three-section-tabs" class="nav nav-tabs flex-column flex-sm-row">
+  <a class="flex-sm-fill text-sm-center nav-link" href="#">Collection</a>
+  <a class="flex-sm-fill text-sm-center nav-link active" href="#">Assignments</a>
+  <a class="flex-sm-fill text-sm-center nav-link" href="#">Projects</a>
+</nav>
+<h1 class="page-title">
 		Title of this Screen 
 	</h1>
 	<div class="row">
@@ -92,10 +104,10 @@
 <footer class="container-fluid">
 	<hr />
 	<p class="float-right">
-		<a href="#">Back to top</a>
+		<a href="#">Back to top</a> 
 	</p>
 	<p>
-		<a href="#">Footer Link</a> &middot; <a href="#">Footer Link</a>
+		<a href="#">Footer Link</a> &middot; <a href="#">Footer Link</a> 
 	</p>
 </footer>
 </main> 
