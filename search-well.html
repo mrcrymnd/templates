@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<!-- Google Fonts CSS -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" rel="stylesheet">
+	<style>
+		* { font-family: 'Open Sans', sans-serif; }
+		
+		/*accessible blue*/
+		a { color: #0056b3; }
+		h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+		h1.page-title { padding: .5em 0em .5em 0em; }
+		
+		h6.course-title
+		{
+			text-transform: uppercase;
+			padding: 1em 0em 1em 0em;
+		}
+		
+		/*bottom border fix*/
+		nav#three-section-tabs a.active { margin-bottom: -1px; }
+		
+		#search-well
+		{
+			border-radius: .25em;
+			background-color: #f6f6f6;
+			padding: 1em;
+			margin-bottom: 1em;
+		}
+		
+		/* query pulls right-aligned user link back into left-aligned mobile vertical navigation menu */
+		
+		@media only screen and (max-width: 991px)
+		{
+			li.ml-auto { margin-left: 0!important; }
+		}
+		
+		/* query formats responsive tabs for mobile viewport */
+		
+		@media only screen and (max-width: 575px)
+		{
+			nav#three-section-tabs { border: 0; }
+			nav#three-section-tabs .nav-link { border-radius: .25rem; }
+			nav#three-section-tabs .active { border: 1px solid #dee2e6; }
+		}
+</style>
+	<title>Search Inputs Well</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000;">
+	<a title="Mediathread" class="navbar-brand" href="#"> <img src="logo-mediathread-bgdark.svg" height="50" alt="Mediathread" /> </a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> 
+	<div class="collapse navbar-collapse" id="navbarNavDropdown">
+		<ul class="navbar-nav w-100">
+			<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Get Support </a> 
+			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				<a class="dropdown-item" href="#">Knowledge Base</a> <a class="dropdown-item" href="#">Contact Us</a> 
+			</div>
+			</li>
+			<li class="nav-item"> <a class="nav-link" href="#">Configure Course </a> </li>
+			<li class="nav-item dropdown ml-auto"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="badge badge-warning">Course Non-member</span> Hi, Marc! (mar227) </a> 
+			<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+				<a class="dropdown-item" href="#">My Courses</a> <a class="dropdown-item" href="#">Administer</a> <a class="dropdown-item" href="#">Impersonate</a> 
+			</div>
+			</li>
+			<li class="nav-item"> <a href="#" class="btn btn-outline-primary btn-block">Sign Out</a> </li>
+		</ul>
+	</div>
+</nav>
+<main role="main"> 
+<div class="container-fluid">
+	<h6 class="course-title">
+		Course Title 
+	</h6>
+	<nav id="three-section-tabs" class="nav nav-tabs flex-column flex-sm-row">
+		<a class="flex-sm-fill text-sm-center nav-link" href="#">Collection</a> <a class="flex-sm-fill text-sm-center nav-link active" href="#">Assignments</a> <a class="flex-sm-fill text-sm-center nav-link" href="#">Projects</a> 
+	</nav>
+	<h1 class="page-title">
+		Title of this Screen 
+	</h1>
+	<form id="search-well">
+		<div class="form-row">
+			<div class="form-group col-md-4">
+				<label for="search">Title</label> 
+				<div class="form-row">
+					<div class="col-md-8">
+						<input type="text" class="form-control" id="search" placeholder="Type">
+					</div>
+					<div class="col-md-4">
+						<a href="#" class="btn btn-secondary btn-block mb-2">Search</a> 
+					</div>
+				</div>
+			</div>
+			<div class="form-group col-md-2">
+				<label for="owner">Owner</label> 
+				<select class="form-control" id="owner">
+					<option>Select</option>
+					<option>Option</option>
+					<option>Option</option>
+					<option>Option</option>
+					<option>Option</option>
+				</select>
+			</div>
+			<div class="form-group col-md-2">
+				<label for="tag">Tag</label> 
+				<select class="form-control" id="tag">
+					<option>Select</option>
+					<option>Option</option>
+					<option>Option</option>
+					<option>Option</option>
+					<option>Option</option>
+				</select>
+			</div>
+			<div class="form-group col-md-2">
+				<label for="term">Term</label> 
+				<select class="form-control" id="term">
+					<option>Select</option>
+					<option>Option</option>
+					<option>Option</option>
+					<option>Option</option>
+					<option>Option</option>
+				</select>
+			</div>
+			<div class="form-group col-md-2">
+				<label for="date">Date</label> 
+				<select class="form-control" id="date">
+					<option>Select</option>
+					<option>Option</option>
+					<option>Option</option>
+					<option>Option</option>
+					<option>Option</option>
+				</select>
+			</div>
+		</div>
+	</form>
+	<div class="row">
+		<div class="col-md-12">
+			<h2>
+				Subtitle 
+			</h2>
+			<p class="lead">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mi lacus, vestibulum eget pulvinar non, gravida eu tellus. 
+			</p>
+			<p>
+				Nulla eleifend, arcu ac tincidunt fermentum, ante arcu rhoncus mi, non ultricies justo quam quis tortor. Pellentesque quis vulputate nisi. Vivamus nec rhoncus tellus. Cras tristique facilisis sem, in volutpat diam egestas vel. Cras quis rutrum nisi. Suspendisse id sollicitudin arcu. Nullam efficitur lorem venenatis, porttitor magna non, accumsan lorem. Curabitur condimentum, nisl nec rutrum sodales, orci velit consequat justo, eu egestas metus tellus ac quam. Etiam nisi urna, placerat ut rhoncus non, aliquet in enim. 
+			</p>
+		</div>
+	</div>
+</div>
+<footer class="container-fluid">
+	<hr />
+	<p class="float-right">
+		<a href="#">Back to top</a> 
+	</p>
+	<p>
+		<a href="#">Footer Link</a> &middot; <a href="#">Footer Link</a> 
+	</p>
+</footer>
+</main> 
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+</script>
+</body>
+</html>
