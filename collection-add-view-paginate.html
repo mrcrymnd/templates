@@ -13,6 +13,18 @@
 		
 		/*accessible blue*/
 		a, a.page-link { color: #0056b3; }
+		
+		.page-item.active .page-link
+		{
+			background-color: #0056b3;
+			border-color: #0056b3;
+		}
+		
+        .btn-outline-primary:not(:disabled):not(.disabled).active {
+			background-color: #0056b3;
+			border-color: #0056b3;
+        }
+		
 		h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
 		h1.page-title { padding: 0em 0em .5em 0em; }
 		
@@ -109,7 +121,7 @@
 				<div class="input-group mb-3">
 					<input id="search" type="text" class="form-control form-control-sm" placeholder="Search for..." aria-label="Search for..." aria-describedby="button-addon">
 					<div class="input-group-append">
-						<a href="#" class="btn btn-outline-secondary btn-sm" type="button" id="button-addon">Search</a> 
+						<a href="#" class="btn btn-secondary btn-sm" type="button" id="button-addon">Search</a> 
 					</div>
 				</div>
 			</div>
