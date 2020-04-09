@@ -70,6 +70,8 @@
 			nav#three-section-tabs { border: 0; }
 			nav#three-section-tabs .nav-link { border-radius: .25rem; }
 			nav#three-section-tabs .active { border: 1px solid #dee2e6; }
+			
+			#add-button {margin-bottom: 1em;}
 		}
 </style>
 	<title>Collection: Viewing, Adding, and Selecting Pages</title>
@@ -109,9 +111,20 @@
 			</h1>
 		</div>
 		<div class="col-md-3">
-			<nav id="addition" class="nav justify-content-end flex-column flex-md-row">
-				<a id="item-upload" class="btn btn-outline-secondary flex-md-fill text-sm-center nav-link" href="#">Upload Item</a> <a id="item-import" class="btn btn-outline-secondary flex-md-fill text-sm-center nav-link" href="#">Import Item</a> 
-			</nav>
+		
+            <nav id="addition" class="nav justify-content-end flex-column flex-md-row btn-group" role="group" aria-label="Button group with nested dropdown">
+              <div class="btn-group" role="group">
+                <button id="add-button" type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Add to Collection
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="add-button">
+                  <a class="dropdown-item" href="#">Upload an Item</a>
+                  <a class="dropdown-item" href="#">Import an Item</a>
+                </div>
+                <!--<a id="item-import" class="btn btn-outline-secondary flex-md-fill text-sm-center nav-link" href="#">Import Item</a>-->
+              </div>
+            </nav>		
+
 		</div>
 	</div>
 	<form id="search-well">
