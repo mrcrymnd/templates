@@ -54,18 +54,26 @@
 		
 		.card-thumbnail
 		{
-			background-color: black;
+			background-color: #444;
 			min-height: 168px;
-			padding: 1em 0em 1em 0em;
 			position: relative;
 		}
 		
 		.media-type
 		{
 			position: absolute;
-			left: 1em;
-			top: 1em;
+			left: .8em;
+			top: .8em;
 		}
+		
+		.timecode
+		{
+			position: absolute;
+			left: 42%;
+			bottom: .8em;
+		}
+		
+		.badge-dark {background-color: black;}
 		
 		.card-title, .card-text
 		{
@@ -226,7 +234,10 @@
 			<div class="media-type">
 				<span class="badge badge-light">Video</span> 
 			</div>
-			<a href="#"><img src="https://dummyimage.com/299x168/C70039/ffffff.png&text=16:9" class="rounded mx-auto d-block" alt="thumbnail"></a> 
+			<div class="timecode">
+				<span class="badge badge-dark">00:00:00</span> 
+			</div>
+			<a href="#"><img src="https://dummyimage.com/299x168/C70039/ffffff.png&text=16:9" class="mx-auto d-block" alt="thumbnail"></a> 
 		</div>
 		<div class="card-body">
 			<h5 class="card-title">
@@ -253,7 +264,10 @@
 			<div class="media-type">
 				<span class="badge badge-light">Video</span> 
 			</div>
-			<a href="#"><img src="https://dummyimage.com/224x168/0F6045/ffffff.png&text=4:3" class="rounded mx-auto d-block" alt="thumbnail"></a> 
+			<div class="timecode">
+				<span class="badge badge-dark">00:00:00</span> 
+			</div>
+			<a href="#"><img src="https://dummyimage.com/224x168/0F6045/ffffff.png&text=4:3" class="mx-auto d-block" alt="thumbnail"></a> 
 		</div>
 		<div class="card-body">
 			<h5 class="card-title">
@@ -280,7 +294,7 @@
 			<div class="media-type">
 				<span class="badge badge-light">Image</span> 
 			</div>
-			<a href="#"><img src="https://dummyimage.com/168x168/2E9EE7/ffffff.png&text=1:1" class="rounded mx-auto d-block" alt="thumbnail"></a> 
+			<a href="#"><img src="https://dummyimage.com/168x168/2E9EE7/ffffff.png&text=1:1" class="mx-auto d-block" alt="thumbnail"></a> 
 		</div>
 		<div class="card-body">
 			<h5 class="card-title">
@@ -290,16 +304,9 @@
 			<h6>
 				Selections 
 			</h6>
-			<p class="card-text">
-				<a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </a> 
+			<p class="card-text text-muted">
+				None
 			</p>
-			<nav aria-label="Page navigation example">
-				<ul class="pagination btn-sm">
-					<li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a> </li>
-					<li class="page-item"><a class="page-link" href="#">1 of 8</a></li>
-					<li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a> </li>
-				</ul>
-			</nav>
 		</div>
 	</div>
 </div>
@@ -309,7 +316,10 @@
 			<div class="media-type">
 				<span class="badge badge-light">Video</span> 
 			</div>
-			<a href="#"><img src="https://dummyimage.com/224x168/fc03f8/ffffff.png&text=4:3" class="rounded mx-auto d-block" alt="thumbnail"></a> 
+			<div class="timecode">
+				<span class="badge badge-dark">00:00:00</span> 
+			</div>
+			<a href="#"><img src="https://dummyimage.com/224x168/fc03f8/ffffff.png&text=4:3" class="mx-auto d-block" alt="thumbnail"></a> 
 		</div>
 		<div class="card-body">
 			<h5 class="card-title">
@@ -336,7 +346,7 @@
 			<div class="media-type">
 				<span class="badge badge-light">Image</span> 
 			</div>
-			<a href="#"><img src="https://dummyimage.com/168x168/fcba03/ffffff.png&text=1:1" class="rounded mx-auto d-block" alt="thumbnail"></a> 
+			<a href="#"><img src="https://dummyimage.com/168x168/fcba03/ffffff.png&text=1:1" class="mx-auto d-block" alt="thumbnail"></a> 
 		</div>
 		<div class="card-body">
 			<h5 class="card-title">
@@ -346,24 +356,20 @@
 			<h6>
 				Selections 
 			</h6>
-			<p class="card-text">
-				<a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </a> 
+			<p class="card-text text-muted">
+				None
 			</p>
-			<nav aria-label="Page navigation example">
-				<ul class="pagination btn-sm">
-					<li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a> </li>
-					<li class="page-item"><a class="page-link" href="#">1 of 8</a></li>
-					<li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a> </li>
-				</ul>
-			</nav>
 		</div>
 	</div>
 	<div class="card">
 		<div class="card-thumbnail">
 			<div class="media-type">
-				<span class="badge badge-light">Video</span> 
+				<span class="badge badge-light">Audio</span> 
 			</div>
-			<a href="#"> <a href="#"><img src="https://dummyimage.com/299x168/03fce3/ffffff.png&text=16:9" class="rounded mx-auto d-block" alt="thumbnail"></a></a> 
+			<div class="timecode">
+				<span class="badge badge-dark">00:00:00</span> 
+			</div>
+			<a href="#"> <a href="#"><img src="https://dummyimage.com/299x168/cccccc/000000.png&text=Audio" class="mx-auto d-block" alt="thumbnail"></a></a> 
 		</div>
 		<div class="card-body">
 			<h5 class="card-title">
