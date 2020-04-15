@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<!-- Google Fonts CSS -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" rel="stylesheet">
+	<style>		* { font-family: 'Open Sans', sans-serif; }
+		
+		/*accessible blue*/
+		a, a.page-link { color: #0056b3; }
+		
+		.page-item.active .page-link
+		{
+			background-color: #0056b3;
+			border-color: #0056b3;
+		}
+		
+		        .btn-outline-primary:not(:disabled):not(.disabled).active {
+			background-color: #0056b3;
+			border-color: #0056b3;
+		        }
+		
+		h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+		
+		h1.page-title { padding: 0em 0em .5em 0em; }
+		
+		h6.course-title
+		{
+			text-transform: uppercase;
+			padding: 1em 0em 1em 0em;
+		}
+		
+		#title-addition { margin-top: 1em; }
+		
+		/*bottom border fix*/
+		nav#three-section-tabs a.active { margin-bottom: -1px; }
+		
+		#search-well
+		{
+			border-radius: .25em;
+			background-color: #f6f6f6;
+			padding: .5em .5em 0em .5em;
+			margin-bottom: 1em;
+		}
+		
+		#search-well label { font-size: .8em; }
+		#title-addition { margin-top: 1em; }
+		#view-pagination { margin-bottom: 1em; }
+		
+		.card-thumbnail
+		{
+			background-color: #999;
+			position: relative;
+		}
+		
+		.media-type
+		{
+			position: absolute;
+			left: .8em;
+			top: .8em;
+		}
+		
+		.timecode
+		{
+			position: absolute;
+			left: 42%;
+			bottom: .8em;
+		}
+		
+		.badge-dark {background-color: black; color: yellow;}
+		
+		.card-title, .card-text
+		{
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+				
+		h6 { text-transform: uppercase; }
+				
+		/* collection table */
+		
+		table#items th, table#items td {vertical-align: middle;} 		
+		table#items td.selections {
+		    background-color: #f6f6f6;
+		}
+		
+		table#items .thead-dark th {
+		    background-color: #999;
+		    border-color: #999;
+		}
+		
+		table#items .thead-dark th a {
+		    color: #fff;
+		}
+		
+		 div.scroll { 
+		                height: 30em; 
+		                overflow-x: hidden; 
+		                overflow-x: auto; 
+		                background-color: #fff;
+		                border: 1px solid #D7DBE0;
+		            } 		
+		
+		/* query pulls right-aligned user link back into left-aligned mobile vertical navigation menu */
+		
+		@media only screen and (max-width: 991px)
+		{
+			li.ml-auto { margin-left: 0!important; }
+		}
+		
+		/* query formats responsive tabs for mobile viewport */
+		
+		@media only screen and (max-width: 575px)
+		{
+			nav#three-section-tabs { border: 0; }
+			nav#three-section-tabs .nav-link { border-radius: .25rem; }
+			nav#three-section-tabs .active { border: 1px solid #dee2e6; }
+			
+			#add-button {margin-bottom: 1em;}
+		}
+	</style>
+	<title>List View</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000;">
+	<a title="Mediathread" class="navbar-brand" href="#"> <img src="logo-mediathread-bgdark.svg" height="50" alt="Mediathread" /> </a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> 
+	<div class="collapse navbar-collapse" id="navbarNavDropdown">
+		<ul class="navbar-nav w-100">
+			<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Get Support </a> 
+			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				<a class="dropdown-item" href="#">Knowledge Base</a> <a class="dropdown-item" href="#">Contact Us</a> 
+			</div>
+			</li>
+			<li class="nav-item"> <a class="nav-link" href="#">Configure Course </a> </li>
+			<li class="nav-item dropdown ml-auto"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="badge badge-warning">Course Non-member</span> Hi, Marc! (mar227) </a> 
+			<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+				<a class="dropdown-item" href="#">My Courses</a> <a class="dropdown-item" href="#">Administer</a> <a class="dropdown-item" href="#">Impersonate</a> 
+			</div>
+			</li>
+			<li class="nav-item"> <a href="#" class="btn btn-outline-light btn-block">Sign Out</a> </li>
+		</ul>
+	</div>
+</nav>
+<main role="main"> 
+<div class="container-fluid">
+	<h6 class="course-title">
+		Course Title 
+	</h6>
+	<nav id="three-section-tabs" class="nav nav-tabs flex-column flex-sm-row">
+		<a class="flex-sm-fill text-sm-center nav-link active" href="#">Collection</a> <a class="flex-sm-fill text-sm-center nav-link" href="#">Assignments</a> <a class="flex-sm-fill text-sm-center nav-link" href="#">Projects</a> 
+	</nav>
+	<div id="title-addition" class="row">
+		<div class="col-md-9">
+			<h1 class="page-title">
+				Collection 
+			</h1>
+		</div>
+		<div class="col-md-3">
+			<nav id="addition" class="nav justify-content-end flex-column flex-md-row btn-group" role="group" aria-label="Button group with nested dropdown">
+				<div class="btn-group" role="group">
+					<button id="add-button" type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Add to Collection </button> 
+					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="add-button">
+						<a class="dropdown-item" href="#">Upload an Item</a> <a class="dropdown-item" href="#">Import an Item</a> 
+					</div>
+<!--<a id="item-import" class="btn btn-outline-secondary flex-md-fill text-sm-center nav-link" href="#">Import Item</a>-->
+				</div>
+			</nav>
+		</div>
+	</div>
+	<form id="search-well">
+		<div class="form-row">
+			<div class="form-group col-md-4">
+				<label for="search">Title</label> 
+				<div class="input-group mb-3">
+					<input id="search" type="text" class="form-control form-control-sm" placeholder="Search for..." aria-label="Search for..." aria-describedby="button-addon">
+					<div class="input-group-append">
+						<a href="#" class="btn btn-secondary btn-sm" type="button" id="button-addon">Search</a> 
+					</div>
+				</div>
+			</div>
+			<div class="form-group col-md-2">
+				<label for="owner">Owner</label> 
+				<select class="form-control form-control-sm" id="owner">
+					<option>Select</option>
+					<option>Option</option>
+					<option>Option</option>
+					<option>Option</option>
+					<option>Option</option>
+				</select>
+			</div>
+			<div class="form-group col-md-2">
+				<label for="tag">Tag</label> 
+				<select class="form-control form-control-sm" id="tag">
+					<option>Select</option>
+					<option>Option</option>
+					<option>Option</option>
+					<option>Option</option>
+					<option>Option</option>
+				</select>
+			</div>
+			<div class="form-group col-md-2">
+				<label for="term">Term</label> 
+				<select class="form-control form-control-sm" id="term">
+					<option>Select</option>
+					<option>Option</option>
+					<option>Option</option>
+					<option>Option</option>
+					<option>Option</option>
+				</select>
+			</div>
+			<div class="form-group col-md-2">
+				<label for="date">Date</label> 
+				<select class="form-control form-control-sm" id="date">
+					<option>Select</option>
+					<option>Option</option>
+					<option>Option</option>
+					<option>Option</option>
+					<option>Option</option>
+				</select>
+			</div>
+		</div>
+	</form>
+	<div id="view-pagination" class="row">
+		<div class="col-md-6">
+			<div id="view-toggle" class="btn-group" role="group" aria-label="View Toggle">
+				<a href="grid-view.html" class="btn btn-outline-primary btn-sm">Grid</a> <a href="#" class="btn btn-outline-primary btn-sm active">List</a> 
+			</div>
+		</div>
+		<div class="col-md-6">
+			<ul class="pagination nav justify-content-end btn-sm" style="padding: 0;">
+				<li class="page-item"> <a class="page-link" href="#">First</a> </li>
+				<li class="page-item"><a class="page-link" href="#">Previous</a></li>
+				<li class="page-item active"> <a class="page-link" href="#">1 of 3<span class="sr-only">(current)</span></a> </li>
+				<li class="page-item"><a class="page-link" href="#">Next</a></li>
+				<li class="page-item"> <a class="page-link" href="#">Last</a> </li>
+			</ul>
+		</div>
+	</div>
+	<div class="alert alert-info" role="alert">
+		Mediathread is currently loading all of the items within this collection. 
+	</div>
+	<div class="alert alert-warning" role="alert">
+		There are no matching items to your search request. Please try again. 
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<table id="items" class="table table-hover table-responsive-sm">
+				<thead class="thead-dark">
+					<th scope="col"><a href="#">Item Title </a></th>
+					<th scope="col"><a href="#">Selections Made from Item</a></th>
+					<th scope="col"><a href="#">Media Type</a></th>
+					<th scope="col"><a href="#">Owner</a></th>
+					<th scope="col"><a href="#">Date</a></th>
+					<th scope="col">Item Preview</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="#">Item Title 1</a></td>
+						<td>0</td>
+						<td>Image</td>
+						<td>mar227</td>
+						<td>01.01.2020</td>
+						<td><img src="https://dummyimage.com/160x90/000/fff&text=thumbnail" /></td>
+					</tr>
+					<tr>
+						<td><a href="#">Item Title 2</a></td>
+						<td><a data-toggle="collapse" href="#selections001" aria-expanded="false" aria-controls="selections001">6</a></td>
+						<td>Image</td>
+						<td>mar227</td>
+						<td>01.01.2020</td>
+						<td><img src="https://dummyimage.com/120x90/000/fff&text=thumbnail" /></td>
+					</tr>
+					<tr>
+						<td colspan="6" class="selections collapse multi-collapse" id="selections001"> 
+						<h5>Selections Created from "Item Title 2"</h5>
+						<div class="scroll">
+							<table class="table table-hover  table-responsive-sm">
+				                <thead class="thead-dark">
+									<tr>
+                                    <th scope="col"><a href="#">Selection Title</a></th>
+                                    <th scope="col"><a href="#">Timecode</a></th>
+                                    <th scope="col"><a href="#">Tags</a></th>
+                                    <th scope="col"><a href="#">Terms</a></th>
+                                    <th scope="col"><a href="#">Notes</a></th>
+					                <th scope="col">Selection Preview</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href="#">Selection Title</a></td>
+										<td><a href="#">N/A</a></td>
+										<td><a href="#">tag1</a>, <a href="#">tag2</a></td>
+										<td><a href="#">Term1</a>, <a href="#">Term2</a></td>
+										<td>Lorem ipsum dolor...</td>
+						                <td><img src="https://dummyimage.com/120x90/000/fff&text=thumbnail" /></td>
+									</tr>
+									<tr>
+										<td><a href="#">Selection Title</a></td>
+										<td><a href="#">N/A</a></td>
+										<td><a href="#">tag1</a>, <a href="#">tag2</a></td>
+										<td><a href="#">Term1</a>, <a href="#">Term2</a></td>
+										<td>Lorem ipsum dolor...</td>
+						                <td><img src="https://dummyimage.com/120x90/000/fff&text=thumbnail" /></td>
+									</tr>
+									<tr>
+										<td><a href="#">Selection Title</a></td>
+										<td><a href="#">N/A</a></td>
+										<td><a href="#">tag1</a>, <a href="#">tag2</a></td>
+										<td><a href="#">Term1</a>, <a href="#">Term2</a></td>
+										<td>Lorem ipsum dolor...</td>
+						                <td><img src="https://dummyimage.com/120x90/000/fff&text=thumbnail" /></td>
+									</tr>
+									<tr>
+										<td><a href="#">Selection Title</a></td>
+										<td><a href="#">N/A</a></td>
+										<td><a href="#">tag1</a>, <a href="#">tag2</a></td>
+										<td><a href="#">Term1</a>, <a href="#">Term2</a></td>
+										<td>Lorem ipsum dolor...</td>
+						                <td><img src="https://dummyimage.com/120x90/000/fff&text=thumbnail" /></td>
+									</tr>
+									<tr>
+										<td><a href="#">Selection Title</a></td>
+										<td><a href="#">N/A</a></td>
+										<td><a href="#">tag1</a>, <a href="#">tag2</a></td>
+										<td><a href="#">Term1</a>, <a href="#">Term2</a></td>
+										<td>Lorem ipsum dolor...</td>
+						                <td><img src="https://dummyimage.com/120x90/000/fff&text=thumbnail" /></td>
+									</tr>
+									<tr>
+										<td><a href="#">Selection Title</a></td>
+										<td><a href="#">N/A</a></td>
+										<td><a href="#">tag1</a>, <a href="#">tag2</a></td>
+										<td><a href="#">Term1</a>, <a href="#">Term2</a></td>
+										<td>Lorem ipsum dolor...</td>
+						                <td><img src="https://dummyimage.com/120x90/000/fff&text=thumbnail" /></td>
+									</tr>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<a style="margin-top: 1em;" class="btn btn-sm btn-secondary" data-toggle="collapse" href="#selections001" aria-expanded="false" aria-controls="selections001">Close</a> </td>
+					</tr>
+					<tr>
+						<td><a href="#">Item Title 3</a></td>
+						<td>0</td>
+						<td>Image</td>
+						<td>mar227</td>
+						<td>01.01.2020</td>
+						<td><img src="https://dummyimage.com/90x90/000/fff&text=thumbnail" /></td>
+					</tr>
+					<tr>
+						<td><a href="#">Item Title 4</a></td>
+						<td>0</td>
+						<td>Image</td>
+						<td>mar227</td>
+						<td>01.01.2020</td>
+						<td><img src="https://dummyimage.com/160x90/000/fff&text=thumbnail" /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<footer class="container-fluid">
+	<hr />
+	<p class="float-right">
+		<a href="#">Back to top</a> 
+	</p>
+	<p>
+		<a href="#">Footer Link</a> &middot; <a href="#">Footer Link</a> 
+	</p>
+</footer>
+</main> 
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+</script>
+</body>
+</html>
