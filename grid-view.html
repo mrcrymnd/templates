@@ -8,8 +8,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <!-- Google Fonts CSS -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" rel="stylesheet">
-	<style>
-		* { font-family: 'Open Sans', sans-serif; }
+	<style>		* { font-family: 'Open Sans', sans-serif; }
 		
 		/*accessible blue*/
 		a, a.page-link { color: #0056b3; }
@@ -108,7 +107,7 @@
 			nav#three-section-tabs .active { border: 1px solid #dee2e6; }
 			#add-button { margin-bottom: 1em; }
 		}
-</style>
+	</style>
 	<title>Grid View</title>
 </head>
 <body>
@@ -132,7 +131,7 @@
 	</div>
 </nav>
 <div class="alert alert-dark" role="alert">
-    <strong>Hang on.</strong> Mediathread is currently loading. 
+	<strong>Hang on.</strong> Mediathread is currently loading. 
 </div>
 <main role="main"> 
 <div class="container-fluid">
@@ -160,7 +159,7 @@
 			</nav>
 		</div>
 	</div>
-<div class="alert alert-info" role="alert">
+	<div class="alert alert-info" role="alert">
 		<strong>Just a moment.</strong> Mediathread is currently loading all of the items within this collection. 
 	</div>
 	<form id="search-well">
@@ -216,12 +215,9 @@
 			</div>
 		</div>
 	</form>
-<div class="alert alert-warning alert-dismissible fade show" role="alert">
-  		<strong>Hmmm.</strong> There are no matching items to your search request. Please try again. 
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>	
+	<div class="alert alert-warning alert-dismissible fade show" role="alert">
+		<strong>Hmmm.</strong> There are no matching items to your search request. Please try again. <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> 
+	</div>
 	<div id="view-pagination" class="row">
 		<div class="col-md-6">
 			<div id="view-toggle" class="btn-group" role="group" aria-label="View Toggle">
@@ -244,6 +240,56 @@
 				<div class="card">
 					<div class="card-thumbnail">
 						<div class="media-type">
+							<span class="badge badge-light">Image</span> 
+						</div>
+						<a href="#"><img src="thumb/guernica.jpg" class="mx-auto d-block img-fluid" alt="thumbnail"></a> 
+					</div>
+					<div class="card-body">
+						<h5 class="card-title">
+							<a href="#">Guernica by Pablo Picasso</a> 
+						</h5>
+						<hr />
+						<h6>
+							Selections 
+						</h6>
+						<p class="card-text">
+							<a href="#">Hand Detail</a> 
+						</p>
+						<nav aria-label="Page navigation example">
+							<ul class="pagination btn-sm">
+								<li class="page-item disabled"> <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a> </li>
+								<li class="page-item"><a class="page-link" href="#">1 of 1</a></li>
+								<li class="page-item disabled"> <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a> </li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-thumbnail">
+						<div class="media-type">
+							<span class="badge badge-light">Audio</span> 
+						</div>
+						<div class="timecode">
+							<span class="badge badge-dark">00:45:00</span> 
+						</div>
+						<a href="#"><img src="thumb/varda.jpg" class="mx-auto d-block img-fluid" alt="thumbnail"></a> 
+					</div>
+					<div class="card-body">
+						<h5 class="card-title">
+							<a href="#">Interview with Agnès Varda</a> 
+						</h5>
+						<hr />
+						<h6>
+							Selections 
+						</h6>
+						<p class="card-text text-muted">
+							None 
+						</p>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-thumbnail">
+						<div class="media-type">
 							<span class="badge badge-light">Video</span> 
 						</div>
 						<div class="timecode">
@@ -261,6 +307,38 @@
 						</h6>
 						<p class="card-text">
 							<a href="#">The Saint Bartholemew's Day Massacre</a> 
+						</p>
+						<nav aria-label="Page navigation example">
+							<ul class="pagination btn-sm">
+								<li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a> </li>
+								<li class="page-item"><a class="page-link" href="#">1 of 2</a></li>
+								<li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a> </li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="card-group">
+				<div class="card">
+					<div class="card-thumbnail">
+						<div class="media-type">
+							<span class="badge badge-light">Video</span> 
+						</div>
+						<div class="timecode">
+							<span class="badge badge-dark">01:00:00</span> 
+						</div>
+						<a href="#"><img src="thumb/sesame.jpg" class="mx-auto d-block img-fluid" alt="thumbnail"></a> 
+					</div>
+					<div class="card-body">
+						<h5 class="card-title">
+							<a href="#">Sesame Street, Season 10 - Episode 15</a> 
+						</h5>
+						<hr />
+						<h6>
+							Selections 
+						</h6>
+						<p class="card-text">
+							<a href="#">Grover Speaks to Children</a> 
 						</p>
 						<nav aria-label="Page navigation example">
 							<ul class="pagination btn-sm">
@@ -311,88 +389,6 @@
 					<div class="card-body">
 						<h5 class="card-title">
 							<a href="#">The Montefeltro Altarpiece</a> 
-						</h5>
-						<hr />
-						<h6>
-							Selections 
-						</h6>
-						<p class="card-text text-muted">
-							None 
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="card-group">
-				<div class="card">
-					<div class="card-thumbnail">
-						<div class="media-type">
-							<span class="badge badge-light">Video</span> 
-						</div>
-						<div class="timecode">
-							<span class="badge badge-dark">01:00:00</span> 
-						</div>
-						<a href="#"><img src="thumb/sesame.jpg" class="mx-auto d-block img-fluid" alt="thumbnail"></a> 
-					</div>
-					<div class="card-body">
-						<h5 class="card-title">
-							<a href="#">Sesame Street, Season 10 - Episode 15</a> 
-						</h5>
-						<hr />
-						<h6>
-							Selections 
-						</h6>
-						<p class="card-text">
-							<a href="#">Grover Speaks to Children</a> 
-						</p>
-						<nav aria-label="Page navigation example">
-							<ul class="pagination btn-sm">
-								<li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a> </li>
-								<li class="page-item"><a class="page-link" href="#">1 of 2</a></li>
-								<li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a> </li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-				<div class="card">
-					<div class="card-thumbnail">
-						<div class="media-type">
-							<span class="badge badge-light">Image</span> 
-						</div>
-						<a href="#"><img src="thumb/guernica.jpg" class="mx-auto d-block img-fluid" alt="thumbnail"></a> 
-					</div>
-					<div class="card-body">
-						<h5 class="card-title">
-							<a href="#">Guernica by Pablo Picasso</a> 
-						</h5>
-						<hr />
-						<h6>
-							Selections 
-						</h6>
-						<p class="card-text">
-							<a href="#">Hand Detail</a> 
-						</p>
-						<nav aria-label="Page navigation example">
-							<ul class="pagination btn-sm">
-								<li class="page-item disabled"> <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a> </li>
-								<li class="page-item"><a class="page-link" href="#">1 of 1</a></li>
-								<li class="page-item disabled"> <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a> </li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-				<div class="card">
-					<div class="card-thumbnail">
-						<div class="media-type">
-							<span class="badge badge-light">Audio</span> 
-						</div>
-						<div class="timecode">
-							<span class="badge badge-dark">00:45:00</span> 
-						</div>
-						<a href="#"><img src="thumb/varda.jpg" class="mx-auto d-block img-fluid" alt="thumbnail"></a> 
-					</div>
-					<div class="card-body">
-						<h5 class="card-title">
-							<a href="#">Interview with Agnès Varda</a> 
 						</h5>
 						<hr />
 						<h6>
