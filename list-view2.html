@@ -8,7 +8,8 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <!-- Google Fonts CSS -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" rel="stylesheet">
-	<style>		* { font-family: 'Open Sans', sans-serif; }
+	<style>
+		* { font-family: 'Open Sans', sans-serif; }
 		
 		/*accessible blue*/
 		a, a.page-link { color: #0056b3; }
@@ -19,13 +20,13 @@
 			border-color: #0056b3;
 		}
 		
-		        .btn-outline-primary:not(:disabled):not(.disabled).active {
+		.btn-outline-primary:not(:disabled):not(.disabled).active
+		{
 			background-color: #0056b3;
 			border-color: #0056b3;
-		        }
+		}
 		
 		h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
-		
 		h1.page-title { padding: 0em 0em .5em 0em; }
 		
 		h6.course-title
@@ -71,7 +72,11 @@
 			bottom: .8em;
 		}
 		
-		.badge-dark {background-color: black; color: yellow;}
+		.badge-dark
+		{
+			background-color: black;
+			color: yellow;
+		}
 		
 		.card-title, .card-text
 		{
@@ -79,29 +84,22 @@
 			overflow: hidden;
 			text-overflow: ellipsis;
 		}
-				
+		
 		h6 { text-transform: uppercase; }
-				
+		
 		/* collection table */
+		table#items th, table#items td { vertical-align: middle; }
+		table#items td.selections { background-color: #f6f6f6; }
 		
-		table#items th, table#items td {vertical-align: middle;} 		
-		table#items td.selections {
-		    background-color: #f6f6f6;
+		table#items .thead-dark th
+		{
+			background-color: #ccc;
+			border-color: #ccc;
 		}
 		
-		table#items .thead-dark th {
-		    background-color: #999;
-		    border-color: #999;
-		}
+		table#items .thead-dark th a { color: #000; }
+		table#items th, table#items td { vertical-align: top!important; }
 		
-		table#items .thead-dark th a {
-		    color: #fff;
-		}
-				
-table#items th, table#items td {
-    vertical-align: top!important;
-}
-				
 		/* query pulls right-aligned user link back into left-aligned mobile vertical navigation menu */
 		
 		@media only screen and (max-width: 991px)
@@ -116,10 +114,9 @@ table#items th, table#items td {
 			nav#three-section-tabs { border: 0; }
 			nav#three-section-tabs .nav-link { border-radius: .25rem; }
 			nav#three-section-tabs .active { border: 1px solid #dee2e6; }
-			
-			#add-button {margin-bottom: 1em;}
+			#add-button { margin-bottom: 1em; }
 		}
-	</style>
+</style>
 	<title>List View</title>
 </head>
 <body>
