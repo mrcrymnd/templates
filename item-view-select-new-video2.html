@@ -8,138 +8,133 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <!-- Google Fonts CSS -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" rel="stylesheet">
-	<style>		* { font-family: 'Open Sans', sans-serif; }
-		
-		/*accessible blue*/
-		a, a.page-link { color: #0056b3; }
-		
-		.page-item.active .page-link
-		{
-			background-color: #0056b3;
-			border-color: #0056b3;
-		}
-		
-		.btn-outline-primary:not(:disabled):not(.disabled).active
-		{
-			background-color: #0056b3;
-			border-color: #0056b3;
-		}
-		
-		h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
-		h1.page-title { padding: 0em 0em .5em 0em; }
-		h3 a { font-family: 'Montserrat', sans-serif; }
-		h6.course-title
-		{
-			text-transform: uppercase;
-			padding: 1em 0em 1em 0em;
-		}
-		
-		#title-addition { margin-top: 1em; }
-		
-		/*bottom border fix*/
-		nav#three-section-tabs a.active { margin-bottom: -1px; }
-		
-		#search-well
-		{
-			border-radius: .25em;
-			background-color: #f6f6f6;
-			padding: .5em .5em 0em .5em;
-			margin-bottom: 1em;
-		}
-		
-		#search-well label { font-size: .8em; }
-		#title-addition { margin-top: 1em; }
-		#view-pagination { margin-bottom: 1em; }
-		
-		.card-thumbnail
-		{
-			background-color: #ccc;
-			position: relative;
-		}
-		
-		.card-thumbnail img
-		{
-			height: 12em;
-		}
-		
-		.media-type
-		{
-			position: absolute;
-			left: .8em;
-			top: .8em;
-		}
-		
-		.timecode
-		{
-			position: absolute;
-			left: 42%;
-			bottom: .8em;
-		}
-		
-		.badge-dark
-		{
-			background-color: black;
-			color: yellow;
-		}
-		
-		.card-title, .card-text
-		{
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
-		}
-		
-		h6 { text-transform: uppercase; }
-		
-		.card-selection {background-color: #f6f6f6;}
-		.card-selection.active {background-color: #fff;}
-		
-		/* query pulls right-aligned user link back into left-aligned mobile vertical navigation menu */
-		@media only screen and (max-width: 991px)
-		{
-			li.ml-auto { margin-left: 0!important; }
-		}
-		
-		/* query formats responsive tabs for mobile viewport */
-		
-		@media only screen and (max-width: 575px)
-		{
-			nav#three-section-tabs { border: 0; }
-			nav#three-section-tabs .nav-link { border-radius: .25rem; }
-			nav#three-section-tabs .active { border: 1px solid #dee2e6; }
-			#add-button { margin-bottom: 1em; }
-		}
-	</style>
+<style>
+	* { font-family: 'Open Sans', sans-serif; }
+	
+	/*accessible blue*/
+	a, a.page-link { color: #0056b3; }
+	
+	.page-item.active .page-link
+	{
+		background-color: #0056b3;
+		border-color: #0056b3;
+	}
+	
+	.btn-outline-primary:not(:disabled):not(.disabled).active
+	{
+		background-color: #0056b3;
+		border-color: #0056b3;
+	}
+	
+	h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+	h1.page-title { padding: 0em 0em .5em 0em; }
+	h3 a { font-family: 'Montserrat', sans-serif; }
+	
+	h6.course-title
+	{
+		text-transform: uppercase;
+		padding: 1em 0em 1em 0em;
+	}
+	
+	#title-addition { margin-top: 1em; }
+	
+	/*bottom border fix*/
+	nav#three-section-tabs a.active { margin-bottom: -1px; }
+	
+	#search-well
+	{
+		border-radius: .25em;
+		background-color: #f6f6f6;
+		padding: .5em .5em 0em .5em;
+		margin-bottom: 1em;
+	}
+	
+	#search-well label { font-size: .8em; }
+	#title-addition { margin-top: 1em; }
+	#view-pagination { margin-bottom: 1em; }
+	
+	.card-thumbnail
+	{
+		background-color: #ccc;
+		position: relative;
+	}
+	
+	.card-thumbnail img { height: 12em; }
+	
+	.media-type
+	{
+		position: absolute;
+		left: .8em;
+		top: .8em;
+	}
+	
+	.timecode
+	{
+		position: absolute;
+		left: 42%;
+		bottom: .8em;
+	}
+	
+	.badge-dark
+	{
+		background-color: black;
+		color: yellow;
+	}
+	
+	.card-title, .card-text
+	{
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	
+	h6 { text-transform: uppercase; }
+	.card-selection { background-color: #f6f6f6; }
+	.card-selection.active { background-color: #fff; }
+	
+	/* query pulls right-aligned user link back into left-aligned mobile vertical navigation menu */
+	
+	@media only screen and (max-width: 991px)
+	{
+		li.ml-auto { margin-left: 0!important; }
+	}
+	
+	/* query formats responsive tabs for mobile viewport */
+	
+	@media only screen and (max-width: 575px)
+	{
+		nav#three-section-tabs { border: 0; }
+		nav#three-section-tabs .nav-link { border-radius: .25rem; }
+		nav#three-section-tabs .active { border: 1px solid #dee2e6; }
+		#add-button { margin-bottom: 1em; }
+	}
+	</style> 
 	<title>Video Selection View</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000;">
-	<a title="Mediathread" class="navbar-brand" href="#"> <img src="logo-mediathread-bgdark.svg" height="50" alt="Mediathread" /> </a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> 
-	<div class="collapse navbar-collapse" id="navbarNavDropdown">
-		<ul class="navbar-nav w-100">
-			<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Get Support </a> 
-			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-				<a class="dropdown-item" href="#">Knowledge Base</a> <a class="dropdown-item" href="#">Contact Us</a> 
-			</div>
-			</li>
-			<li class="nav-item"> <a class="nav-link" href="#">Configure Course </a> </li>
-			<li class="nav-item dropdown ml-auto"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="badge badge-warning">Course Non-member</span> Hi, Marc! (mar227) </a> 
-			<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-				<a class="dropdown-item" href="#">My Courses</a> <a class="dropdown-item" href="#">Administer</a> <a class="dropdown-item" href="#">Impersonate</a> 
-			</div>
-			</li>
-			<li class="nav-item"> <a href="#" class="btn btn-outline-light btn-block">Sign Out</a> </li>
-		</ul>
-	</div>
-</nav>
-<main role="main"> 
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000;"> <a title="Mediathread" class="navbar-brand" href="#"> <img src="logo-mediathread-bgdark.svg" height="50" alt="Mediathread" /> </a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> 
+<div class="collapse navbar-collapse" id="navbarNavDropdown">
+	<ul class="navbar-nav w-100">
+		<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Get Support </a> 
+		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			<a class="dropdown-item" href="#">Knowledge Base</a> <a class="dropdown-item" href="#">Contact Us</a> 
+		</div>
+		</li>
+		<li class="nav-item"> <a class="nav-link" href="#">Configure Course </a> </li>
+		<li class="nav-item dropdown ml-auto"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="badge badge-warning">Course Non-member</span> Hi, Marc! (mar227) </a> 
+		<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+			<a class="dropdown-item" href="#">My Courses</a> <a class="dropdown-item" href="#">Administer</a> <a class="dropdown-item" href="#">Impersonate</a> 
+		</div>
+		</li>
+		<li class="nav-item"> <a href="#" class="btn btn-outline-light btn-block">Sign Out</a> </li>
+	</ul>
+</div>
+</nav> <main role="main"> 
 <div class="container-fluid">
 	<h6 class="course-title">
 		Course Title 
 	</h6>
-	<nav id="three-section-tabs" class="nav nav-tabs flex-column flex-sm-row">
-		<a class="flex-sm-fill text-sm-center nav-link active" href="#">Collection</a> <a class="flex-sm-fill text-sm-center nav-link" href="#">Assignments</a> <a class="flex-sm-fill text-sm-center nav-link" href="#">Projects</a> 
-	</nav>
+	<nav id="three-section-tabs" class="nav nav-tabs flex-column flex-sm-row"> <a class="flex-sm-fill text-sm-center nav-link active" href="#">Collection</a> <a class="flex-sm-fill text-sm-center nav-link" href="#">Assignments</a> <a class="flex-sm-fill text-sm-center nav-link" href="#">Projects</a> </nav> 
 	<div id="title-addition" class="row">
 		<div class="col-md-9">
 			<h1 class="page-title">
@@ -147,15 +142,15 @@
 			</h1>
 		</div>
 		<div class="col-md-3">
-			<nav id="addition" class="nav justify-content-end flex-column flex-md-row btn-group" role="group" aria-label="Button group with nested dropdown">
-				<div class="btn-group" role="group">
-					<button id="add-button" type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Add to Collection </button> 
-					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="add-button">
-						<a class="dropdown-item" href="#">Upload an Item</a> <a class="dropdown-item" href="#">Import an Item</a> 
-					</div>
-<!--<a id="item-import" class="btn btn-outline-secondary flex-md-fill text-sm-center nav-link" href="#">Import Item</a>-->
+			<nav id="addition" class="nav justify-content-end flex-column flex-md-row btn-group" role="group" aria-label="Button group with nested dropdown"> 
+			<div class="btn-group" role="group">
+				<button id="add-button" type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Add to Collection </button> 
+				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="add-button">
+					<a class="dropdown-item" href="#">Upload an Item</a> <a class="dropdown-item" href="#">Import an Item</a> 
 				</div>
-			</nav>
+<!--<a id="item-import" class="btn btn-outline-secondary flex-md-fill text-sm-center nav-link" href="#">Import Item</a>-->
+			</div>
+			</nav> 
 		</div>
 	</div>
 	<form id="search-well">
@@ -220,11 +215,11 @@
 	</div>
 	<div class="row">
 		<div class="col-md-12">
-			<h2>
+			<h2 class="text-center">
 				The Dick Cavett Show 
 			</h2>
-			<div>
-				<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+			<div style="margin: 1em 0em 1em 0em;">
+				<ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
 					<li class="nav-item"> <a class="nav-link active" id="pills-original-tab" data-toggle="pill" href="#pills-original" role="tab" aria-controls="pills-original" aria-selected="true">View Original Item</a> </li>
 					<li class="nav-item"> <a class="nav-link" id="pills-selections-tab" data-toggle="pill" href="#pills-selections" role="tab" aria-controls="pills-selections" aria-selected="false">View All Selections</a> </li>
 					<li class="nav-item"> <a class="nav-link" id="pills-create-tab" data-toggle="pill" href="#pills-create" role="tab" aria-controls="pills-create" aria-selected="false">Create a New Selection</a> </li>
@@ -239,105 +234,86 @@
 					<h3>
 						Original Item 
 					</h3>
-<!--start- video annotation-->
-					<div class="toolbar-annotations toolbar-annotation p-3 bg-dark text-white">
-						<form>
-							<div class="form-row align-items-center">
-								<div class="col-sm-4">
-									<div class="input-group">
-										<div class="input-group-prepend">
-											<button type="button" class="disabled btn btn-outline-light btn-sm"> Selection Start <svg class="bi bi-skip-backward-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M.5 3.5A.5.5 0 000 4v8a.5.5 0 001 0V4a.5.5 0 00-.5-.5z" clip-rule="evenodd" /> <path d="M.904 8.697l6.363 3.692c.54.313 1.233-.066 1.233-.697V4.308c0-.63-.692-1.01-1.233-.696L.904 7.304a.802.802 0 000 1.393z" /> <path d="M8.404 8.697l6.363 3.692c.54.313 1.233-.066 1.233-.697V4.308c0-.63-.693-1.01-1.233-.696L8.404 7.304a.802.802 0 000 1.393z" /> </svg> </button> 
-										</div>
-										<input type="text" disabled class="form-control form-control-sm" id="inlineFormInputGroupUsername" placeholder="00:00:00">
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="input-group">
-										<div class="input-group-prepend">
-											<button type="button" class="disabled  btn btn-outline-light btn-sm"> Selection Stop <svg class="bi bi-skip-forward-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M15.5 3.5a.5.5 0 01.5.5v8a.5.5 0 01-1 0V4a.5.5 0 01.5-.5z" clip-rule="evenodd" /> <path d="M7.596 8.697l-6.363 3.692C.693 12.702 0 12.322 0 11.692V4.308c0-.63.693-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z" /> <path d="M15.096 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.693-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z" /> </svg> </button> 
-										</div>
-										<input type="text" disabled class="form-control form-control-sm" id="inlineFormInputGroupUsername" placeholder="00:00:00">
-									</div>
-								</div>
-								<div class="col-auto">
-									<button type="button" class=" disabled btn btn-outline-light btn-sm"> Play Selection <svg class="bi bi-play-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z" /> </svg> </button> 
-								</div>
-							</div>
-						</form>
-					</div>
-<!--stop- video annotation-->
-					<div class="embed-responsive embed-responsive-16by9">
+					<div style="margin-bottom: 1em;" class="embed-responsive embed-responsive-16by9">
 						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/l4bDVq-nP-0" allowfullscreen></iframe> 
 					</div>
+					<h5 class="card-title">
+						Item Details 
+					</h5>
+					<table class="table" style="margin-top: 1em;">
+						<tbody>
+							<tr>
+								<th scope="row">Item Name</th>
+								<td>The Dick Cavett Show <button type="submit" class="btn btn-secondary btn-sm">Rename</button> </td>
+							</tr>
+							<tr>
+								<th scope="row">Permalink</th>
+								<td><a href="#">https://mediathread.ccnmtl.columbia.edu/asset/33144/</a></td>
+							</tr>
+							<tr>
+								<th scope="row">UUID</th>
+								<td>b3491ea0-8f26-4740-9380-4d7700747b02</td>
+							</tr>
+							<tr>
+								<th scope="row">Creator</th>
+								<td>mar227</td>
+							</tr>
+						</tbody>
+					</table>
+					<button type="submit" class="btn btn-danger btn-sm">Delete</button> 
 				</div>
 				<div class="col-md-6">
-					<ul class="nav mb-3" id="pills-tab2" role="tablist">
-						<li class="nav-item"> <a class="nav-link active" id="pills-details-tab" data-toggle="pill" href="#pills-details" role="tab" aria-controls="pills-details" aria-selected="true">Details</a> </li>
-						<li class="nav-item"> <a class="nav-link" id="pills-references-tab" data-toggle="pill" href="#pills-references" role="tab" aria-controls="pills-references" aria-selected="false">Course References</a> </li>
-					</ul>
-					<div class="tab-content" id="pills-tabContent">
-						<div class="tab-pane fade show active" id="pills-details" role="tabpanel" aria-labelledby="pills-details-tab">
-							<div class="card w-100 card-selection active">
-								<div class="card-body">
-									<h5 class="card-title">
-										The Dick Cavett Show 
-									</h5>
-									<button type="submit" class="btn btn-primary btn-sm">Rename</button> 
-									<table class="table" style="margin-top: 1em;">
-										<tbody>
-											<tr>
-												<th scope="row">Permalink</th>
-												<td><a href="#">https://mediathread.ccnmtl.columbia.edu/asset/33144/</a></td>
-											</tr>
-											<tr>
-												<th scope="row">UUID</th>
-												<td>b3491ea0-8f26-4740-9380-4d7700747b02</td>
-											</tr>
-											<tr>
-												<th scope="row">Creator</th>
-												<td>mar227</td>
-											</tr>
-										</tbody>
-									</table>
-									<button type="submit" class="btn btn-danger btn-sm float-right">Delete</button> 
-								</div>
-							</div>
+					<h3>
+						Item References within Course
+					</h3>
+					<div class="btn-group">
+						<a class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Sort by </a> 
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Title, A-Z</a> 
+							<a class="dropdown-item" href="#">Title, Z-A</a> 
+							<a class="dropdown-item" href="#">Something else</a> 
 						</div>
-						<div class="tab-pane fade" id="pills-references" role="tabpanel" aria-labelledby="pills-references-tab">
-							<div class="btn-group">
-								<a class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Sort by </a> 
-								<div class="dropdown-menu">
-									<a class="dropdown-item" href="#">Title, A-Z</a> <a class="dropdown-item" href="#">Title, Z-A</a> <a class="dropdown-item" href="#">Something else</a> 
-								</div>
-							</div>
-							<div class="card w-100 card-selection">
-								<div class="card-body">
-									<h5 class="card-title">
-										American Comedy 
-									</h5>
-									<h6>
-										Assignment
-									</h6>
-									<p class="card-text">
-										Collected 12/19/15 01:02 AM 
-									</p>
-									<a href="#" class="btn btn-primary btn-sm">View</a> 
-								</div>
-							</div>
-							<div class="card w-100 card-selection">
-								<div class="card-body">
-									<h5 class="card-title">
-										Stage and Stereotype 
-									</h5>
-									<h6>
-										Project
-									</h6>
-									<p class="card-text">
-										Collected 01/09/17 02:01 PM 
-									</p>
-									<a href="#" class="btn btn-primary btn-sm">View</a> 
-								</div>
-							</div>
+					</div>
+					<div class="card w-100 card-selection">
+						<div class="card-body">
+							<h5 class="card-title">
+								American Comedy 
+							</h5>
+							<h6>
+								Assignment 
+							</h6>
+							<p class="card-text">
+								Collected 12/19/15 01:02 AM 
+							</p>
+							<a href="#" class="btn btn-primary btn-sm">View</a> 
+						</div>
+					</div>
+					<div class="card w-100 card-selection">
+						<div class="card-body">
+							<h5 class="card-title">
+								Inside the Mind of Adolescents 
+							</h5>
+							<h6>
+								Assignment 
+							</h6>
+							<p class="card-text">
+								Collected 06/14/19 06:01 PM 
+							</p>
+							<a href="#" class="btn btn-primary btn-sm">View</a> 
+						</div>
+					</div>
+					<div class="card w-100 card-selection">
+						<div class="card-body">
+							<h5 class="card-title">
+								Stage and Stereotype 
+							</h5>
+							<h6>
+								Project 
+							</h6>
+							<p class="card-text">
+								Collected 01/09/17 02:01 PM 
+							</p>
+							<a href="#" class="btn btn-primary btn-sm">View</a> 
 						</div>
 					</div>
 				</div>
@@ -349,7 +325,6 @@
 					<h3>
 						Dick Talks to Groucho Marx 
 					</h3>
-<!--start- video annotation-->
 					<div class="toolbar-annotations toolbar-annotation p-3 bg-dark text-white">
 						<form>
 							<div class="form-row align-items-center">
@@ -378,17 +353,22 @@
 					<div class="embed-responsive embed-responsive-16by9">
 						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/l4bDVq-nP-0" allowfullscreen></iframe> 
 					</div>
-<!--stop- video annotation-->
 				</div>
 				<div class="col-md-6">
+					<h3>
+						Selections from <a href="#">The Dick Cavett Show</a> 
+					</h3>
 					<div class="btn-group">
-						<a class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Sort by </a> 
+						<a class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Sort by </a> 
 						<div class="dropdown-menu">
 							<a class="dropdown-item" href="#">Title, A-Z</a> <a class="dropdown-item" href="#">Title, Z-A</a> <a class="dropdown-item" href="#">Something else</a> 
 						</div>
 					</div>
 					<div class="card w-100 card-selection active">
 						<div class="card-body">
+							<h5 class="card-title">
+								Edit Selection Details 
+							</h5>
 							<form>
 								<div class="form-group">
 									<label for="sample1">Title</label> 
@@ -403,11 +383,9 @@
 									<input type="text" class="form-control" id="sample3" aria-describedby="emailHelp" placeholder="cabaret, Jewish, vaudeville">
 								</div>
 								<div class="form-group">
-									<label for="sample4">Notes</label> <textarea class="form-control" id="sample4" rows="3" placeholder="With supporting text below as a natural lead-in to additional content."></textarea>
+									<label for="sample4">Notes</label> <textarea class="form-control" id="sample4" rows="3" placeholder="With supporting text below as a natural lead-in to additional content."></textarea> 
 								</div>
-								<button type="submit" class="btn btn-danger btn-sm float-right">Delete</button> 
-								<button type="submit" class="btn btn-secondary btn-sm">Cancel</button> 
-								<button type="submit" class="btn btn-primary btn-sm">Save</button> 
+								<button type="submit" class="btn btn-danger btn-sm float-right">Delete</button> <button type="submit" class="btn btn-secondary btn-sm">Cancel</button> <button type="submit" class="btn btn-primary btn-sm">Save</button> 
 							</form>
 						</div>
 					</div>
@@ -419,9 +397,7 @@
 							<p class="card-text">
 								With supporting text below as a natural lead-in to additional content. 
 							</p>
-							<a href="#" class="btn btn-secondary btn-sm">Edit</a>
-                            <a href="#" class="btn btn-secondary btn-sm">Copy</a> 
-							<a href="#" class="btn btn-primary btn-sm">View</a> 
+							<a href="#" class="btn btn-secondary btn-sm">Edit</a> <a href="#" class="btn btn-secondary btn-sm">Copy</a> <a href="#" class="btn btn-primary btn-sm">View</a> 
 						</div>
 					</div>
 				</div>
@@ -433,7 +409,6 @@
 					<h3>
 						New Selection 
 					</h3>
-<!--start- video annotation-->
 					<div class="toolbar-annotations toolbar-annotation p-3 bg-dark text-white">
 						<form>
 							<div class="form-row align-items-center">
@@ -462,9 +437,11 @@
 					<div class="embed-responsive embed-responsive-16by9">
 						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/l4bDVq-nP-0" allowfullscreen></iframe> 
 					</div>
-<!--stop- video annotation-->
 				</div>
 				<div class="col-md-6">
+					<h3>
+						Add New Selection Details 
+					</h3>
 					<div class="card w-100 card-selection active">
 						<div class="card-body">
 							<form>
@@ -481,9 +458,9 @@
 									<input type="text" class="form-control" id="sample3" aria-describedby="emailHelp" placeholder="">
 								</div>
 								<div class="form-group">
-									<label for="sample4">Notes</label> <textarea class="form-control" id="sample4" rows="3" placeholder=""></textarea>
+									<label for="sample4">Notes</label> <textarea class="form-control" id="sample4" rows="3" placeholder=""></textarea> 
 								</div>
-								<button type="submit" class="btn btn-secondary btn-sm">Cancel</button> <button type="submit" class="btn btn-primary btn-sm">Save</button> 
+								<button type="submit" class="btn btn-primary btn-sm">Save</button> 
 							</form>
 						</div>
 					</div>
@@ -492,24 +469,19 @@
 		</div>
 	</div>
 </div>
-</div>
-<footer class="container-fluid">
-	<hr />
-	<p class="float-right">
-		<a href="#">Back to top</a> 
-	</p>
-	<p>
-		<a href="#">Footer Link</a> &middot; <a href="#">Footer Link</a> 
-	</p>
-</footer>
-</main> 
+<footer class="container-fluid"> 
+<hr />
+<p class="float-right">
+<a href="#">Back to top</a> 
+</p>
+<p>
+<a href="#">Footer Link</a> &middot; <a href="#">Footer Link</a> 
+</p>
+</footer> </main> 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-</script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-</script>
+</script> <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+</script> 
 </body>
 </html>
