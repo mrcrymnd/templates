@@ -129,7 +129,8 @@
 		<li class="nav-item"> <a href="#" class="btn btn-outline-light btn-block">Sign Out</a> </li>
 	</ul>
 </div>
-</nav> <main role="main"> 
+</nav> 
+<main role="main"> 
 <div class="container-fluid">
 	<h6 class="course-title">
 		Course Title 
@@ -148,12 +149,17 @@
 				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="add-button">
 					<a class="dropdown-item" href="#">Upload an Item</a> <a class="dropdown-item" href="#">Import an Item</a> 
 				</div>
-<!--<a id="item-import" class="btn btn-outline-secondary flex-md-fill text-sm-center nav-link" href="#">Import Item</a>-->
 			</div>
 			</nav> 
 		</div>
 	</div>
-	<form id="search-well">
+	<div id="view-pagination" class="row">
+		<div class="col-md-12">
+			<div id="view-toggle" class="btn-group" role="group" aria-label="View Toggle">
+				<a href="grid-view.html" class="btn btn-outline-secondary btn-sm"><svg class="bi bi-caret-left-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path d="M3.86 8.753l5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 00-1.659-.753l-5.48 4.796a1 1 0 000 1.506z" /> </svg>Back to Full Collection View</a> 
+			</div>
+		</div>
+	</div>	<form id="search-well">
 		<div class="form-row">
 			<div class="form-group col-md-4">
 				<label for="search">Title</label> 
@@ -206,13 +212,6 @@
 			</div>
 		</div>
 	</form>
-	<div id="view-pagination" class="row">
-		<div class="col-md-12">
-			<div id="view-toggle" class="btn-group" role="group" aria-label="View Toggle">
-				<a href="grid-view.html" class="btn btn-outline-secondary btn-sm"><svg class="bi bi-caret-left-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path d="M3.86 8.753l5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 00-1.659-.753l-5.48 4.796a1 1 0 000 1.506z" /> </svg>Back to Full Collection View</a> 
-			</div>
-		</div>
-	</div>
 	<div class="row">
 		<div class="col-md-12">
 			<h2 class="text-center">
@@ -220,15 +219,208 @@
 			</h2>
 			<div style="margin: 1em 0em 1em 0em;">
 				<ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
-					<li class="nav-item"> <a class="nav-link active" id="pills-original-tab" data-toggle="pill" href="#pills-original" role="tab" aria-controls="pills-original" aria-selected="true">View Original Item</a> </li>
-					<li class="nav-item"> <a class="nav-link" id="pills-selections-tab" data-toggle="pill" href="#pills-selections" role="tab" aria-controls="pills-selections" aria-selected="false">View All Selections</a> </li>
+					<li class="nav-item"> <a class="nav-link active" id="pills-selections-tab" data-toggle="pill" href="#pills-selections" role="tab" aria-controls="pills-selections" aria-selected="false">View Selections from Search</a> </li>
 					<li class="nav-item"> <a class="nav-link" id="pills-create-tab" data-toggle="pill" href="#pills-create" role="tab" aria-controls="pills-create" aria-selected="false">Create a New Selection</a> </li>
+					<li class="nav-item"> <a class="nav-link" id="pills-original-tab" data-toggle="pill" href="#pills-original" role="tab" aria-controls="pills-original" aria-selected="true">View the Original Item</a> </li>
 				</ul>
 			</div>
 		</div>
 	</div>
 	<div class="tab-content" id="pills-tabContent">
-		<div class="tab-pane fade show active" id="pills-original" role="tabpanel" aria-labelledby="pills-original-tab">
+		<div class="tab-pane fade show active" id="pills-selections" role="tabpanel" aria-labelledby="pills-selections-tab">
+			<div class="row">
+				<div class="col-md-6">
+					<h3>
+						Dick Talks to Groucho Marx 
+					</h3>
+					<div class="toolbar-annotations toolbar-annotation p-3 bg-dark text-white">
+						<form>
+							<div class="form-row align-items-center">
+								<div class="col-sm-4">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<button type="button" class="btn btn-outline-light btn-sm"> Start Selection <svg class="bi bi-skip-backward-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M.5 3.5A.5.5 0 000 4v8a.5.5 0 001 0V4a.5.5 0 00-.5-.5z" clip-rule="evenodd" /> <path d="M.904 8.697l6.363 3.692c.54.313 1.233-.066 1.233-.697V4.308c0-.63-.692-1.01-1.233-.696L.904 7.304a.802.802 0 000 1.393z" /> <path d="M8.404 8.697l6.363 3.692c.54.313 1.233-.066 1.233-.697V4.308c0-.63-.693-1.01-1.233-.696L8.404 7.304a.802.802 0 000 1.393z" /> </svg> </button> 
+										</div>
+										<input type="text" class="form-control form-control-sm" id="inlineFormInputGroupUsername" placeholder="00:08:12">
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<button type="button" class="btn btn-outline-light btn-sm"> Stop Selection <svg class="bi bi-skip-forward-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M15.5 3.5a.5.5 0 01.5.5v8a.5.5 0 01-1 0V4a.5.5 0 01.5-.5z" clip-rule="evenodd" /> <path d="M7.596 8.697l-6.363 3.692C.693 12.702 0 12.322 0 11.692V4.308c0-.63.693-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z" /> <path d="M15.096 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.693-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z" /> </svg> </button> 
+										</div>
+										<input type="text" class="form-control form-control-sm" id="inlineFormInputGroupUsername" placeholder="00:11:03">
+									</div>
+								</div>
+								<div class="col-auto">
+									<button type="button" class="btn btn-outline-light btn-sm"> Play Selection <svg class="bi bi-play-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z" /> </svg> </button> 
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/l4bDVq-nP-0" allowfullscreen></iframe> 
+					</div>
+				</div>
+				<div class="col-md-6">
+					<h3>
+						Selections from <a id="pills-original-tab" data-toggle="pill" href="#pills-original" role="tab" aria-controls="pills-original" aria-selected="true">The Dick Cavett Show</a> 
+					</h3>
+					<div class="btn-group">
+						<a class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Sort by </a> 
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Title, A-Z</a> <a class="dropdown-item" href="#">Title, Z-A</a> <a class="dropdown-item" href="#">Something else</a> 
+						</div>
+					</div>
+					<!--
+					<div class="card w-100 card-selection active">
+						<div class="card-body">
+							<h5 class="card-title">
+								Edit Selection Details 
+							</h5>
+							<form>
+								<div class="form-group">
+									<label for="sample1">Title</label> 
+									<input type="text" class="form-control" id="sample1" aria-describedby="emailHelp" placeholder="Dick Talks to Groucho Marx">
+								</div>
+								<div class="form-group">
+									<label for="sample2">Terms</label> 
+									<input type="text" class="form-control" id="sample2" placeholder="Cinema, Comedy">
+								</div>
+								<div class="form-group">
+									<label for="sample3">Tags</label> 
+									<input type="text" class="form-control" id="sample3" aria-describedby="emailHelp" placeholder="cabaret, Jewish, vaudeville">
+								</div>
+								<div class="form-group">
+									<label for="sample4">Notes</label> <textarea class="form-control" id="sample4" rows="3" placeholder="With supporting text below as a natural lead-in to additional content."></textarea> 
+								</div>
+								<button type="submit" class="btn btn-danger btn-sm float-right">Delete</button> <button type="submit" class="btn btn-secondary btn-sm">Cancel</button> <button type="submit" class="btn btn-primary btn-sm">Save</button> 
+							</form>
+						</div>
+					</div>
+					-->
+					<div class="card w-100 card-selection active">
+						<div class="card-body">
+							<h5 class="card-title">
+								Dick Talks to Groucho Marx 
+							</h5>
+							<p class="card-text">
+								<a href="#">cabaret</a>,<a href="#"> Jewish</a>, <a href="#">vaudeville</a>
+							</p>
+							<p class="card-text">
+								<a href="#">Cinema</a>, <a href="#">Comedy</a>
+							</p>
+							<p class="card-text">
+								This interview is pretty raw and unsettling. View discretion is advised.
+							</p>
+							<a href="#" class="btn btn-secondary btn-sm">Edit</a> <a href="#" class="btn btn-secondary btn-sm">Copy</a> <a href="#" class="btn btn-primary btn-sm disabled">View</a> 
+						</div>
+					</div>
+					<div class="card w-100 card-selection">
+						<div class="card-body">
+							<h5 class="card-title">
+								From Film to Television 
+							</h5>
+							<p class="card-text">
+								<a href="#">cabaret</a>,<a href="#"> Jewish</a>, <a href="#">vaudeville</a>
+							</p>
+							<p class="card-text">
+								<a href="#">Cinema</a>, <a href="#">Comedy</a>
+							</p>
+							<p class="card-text">
+								With supporting text below as a natural lead-in to additional content.
+							</p>
+							<a href="#" class="btn btn-secondary btn-sm">Edit</a> <a href="#" class="btn btn-secondary btn-sm">Copy</a> <a href="#" class="btn btn-primary btn-sm">View</a> 
+						</div>
+					</div>		
+					<div class="card w-100 card-selection">
+						<div class="card-body">
+							<h5 class="card-title">
+								The Marx Brothers meet The French New Wave
+							</h5>
+							<p class="card-text">
+								<a href="#">cabaret</a>,<a href="#"> Jewish</a>, <a href="#">vaudeville</a>
+							</p>
+							<p class="card-text">
+								<a href="#">Cinema</a>, <a href="#">Comedy</a>
+							</p>
+							<p class="card-text">
+								With supporting text below as a natural lead-in to additional content.
+							</p>
+							<a href="#" class="btn btn-secondary btn-sm">Edit</a> <a href="#" class="btn btn-secondary btn-sm">Copy</a> <a href="#" class="btn btn-primary btn-sm">View</a> 
+						</div>
+					</div>		
+					</div>		
+				</div>
+			</div>
+		<div class="tab-pane fade" id="pills-create" role="tabpanel" aria-labelledby="pills-create-tab">
+			<div class="row">
+				<div class="col-md-6">
+					<h3>
+						New Selection from <a href="#">The Dick Cavett Show</a> 
+					</h3>
+					<div class="toolbar-annotations toolbar-annotation p-3 bg-dark text-white">
+						<form>
+							<div class="form-row align-items-center">
+								<div class="col-sm-4">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<button type="button" class="btn btn-outline-light btn-sm"> Start Selection <svg class="bi bi-skip-backward-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M.5 3.5A.5.5 0 000 4v8a.5.5 0 001 0V4a.5.5 0 00-.5-.5z" clip-rule="evenodd" /> <path d="M.904 8.697l6.363 3.692c.54.313 1.233-.066 1.233-.697V4.308c0-.63-.692-1.01-1.233-.696L.904 7.304a.802.802 0 000 1.393z" /> <path d="M8.404 8.697l6.363 3.692c.54.313 1.233-.066 1.233-.697V4.308c0-.63-.693-1.01-1.233-.696L8.404 7.304a.802.802 0 000 1.393z" /> </svg> </button> 
+										</div>
+										<input type="text" class="form-control form-control-sm" id="inlineFormInputGroupUsername" placeholder="00:08:12">
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<button type="button" class="btn btn-outline-light btn-sm"> Stop Selection <svg class="bi bi-skip-forward-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M15.5 3.5a.5.5 0 01.5.5v8a.5.5 0 01-1 0V4a.5.5 0 01.5-.5z" clip-rule="evenodd" /> <path d="M7.596 8.697l-6.363 3.692C.693 12.702 0 12.322 0 11.692V4.308c0-.63.693-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z" /> <path d="M15.096 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.693-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z" /> </svg> </button> 
+										</div>
+										<input type="text" class="form-control form-control-sm" id="inlineFormInputGroupUsername" placeholder="00:11:03">
+									</div>
+								</div>
+								<div class="col-auto">
+									<button type="button" class="btn btn-outline-light btn-sm"> Play Selection <svg class="bi bi-play-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z" /> </svg> </button> 
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/l4bDVq-nP-0" allowfullscreen></iframe> 
+					</div>
+				</div>
+				<div class="col-md-6">
+					<h3>
+						Additional Selection Information 
+					</h3>
+					<div class="card w-100 card-selection active">
+						<div class="card-body">
+							<h5 class="card-title">
+								Add Selection Details 
+							</h5>
+							<form>
+								<div class="form-group">
+									<label for="sample1">Title</label> 
+									<input type="text" class="form-control" id="sample1" aria-describedby="emailHelp" placeholder="">
+								</div>
+								<div class="form-group">
+									<label for="sample2">Terms</label> 
+									<input type="text" class="form-control" id="sample2" placeholder="">
+								</div>
+								<div class="form-group">
+									<label for="sample3">Tags</label> 
+									<input type="text" class="form-control" id="sample3" aria-describedby="emailHelp" placeholder="">
+								</div>
+								<div class="form-group">
+									<label for="sample4">Notes</label> <textarea class="form-control" id="sample4" rows="3" placeholder=""></textarea> 
+								</div>
+								<button type="submit" class="btn btn-primary btn-sm">Save</button> 
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tab-pane fade" id="pills-original" role="tabpanel" aria-labelledby="pills-original-tab">
 			<div class="row">
 				<div class="col-md-6">
 					<h3>
@@ -318,159 +510,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="tab-pane fade" id="pills-selections" role="tabpanel" aria-labelledby="pills-selections-tab">
-			<div class="row">
-				<div class="col-md-6">
-					<h3>
-						Dick Talks to Groucho Marx 
-					</h3>
-					<div class="toolbar-annotations toolbar-annotation p-3 bg-dark text-white">
-						<form>
-							<div class="form-row align-items-center">
-								<div class="col-sm-4">
-									<div class="input-group">
-										<div class="input-group-prepend">
-											<button type="button" class="btn btn-outline-light btn-sm"> Selection Start <svg class="bi bi-skip-backward-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M.5 3.5A.5.5 0 000 4v8a.5.5 0 001 0V4a.5.5 0 00-.5-.5z" clip-rule="evenodd" /> <path d="M.904 8.697l6.363 3.692c.54.313 1.233-.066 1.233-.697V4.308c0-.63-.692-1.01-1.233-.696L.904 7.304a.802.802 0 000 1.393z" /> <path d="M8.404 8.697l6.363 3.692c.54.313 1.233-.066 1.233-.697V4.308c0-.63-.693-1.01-1.233-.696L8.404 7.304a.802.802 0 000 1.393z" /> </svg> </button> 
-										</div>
-										<input type="text" class="form-control form-control-sm" id="inlineFormInputGroupUsername" placeholder="00:08:12">
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="input-group">
-										<div class="input-group-prepend">
-											<button type="button" class="btn btn-outline-light btn-sm"> Selection Stop <svg class="bi bi-skip-forward-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M15.5 3.5a.5.5 0 01.5.5v8a.5.5 0 01-1 0V4a.5.5 0 01.5-.5z" clip-rule="evenodd" /> <path d="M7.596 8.697l-6.363 3.692C.693 12.702 0 12.322 0 11.692V4.308c0-.63.693-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z" /> <path d="M15.096 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.693-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z" /> </svg> </button> 
-										</div>
-										<input type="text" class="form-control form-control-sm" id="inlineFormInputGroupUsername" placeholder="00:11:03">
-									</div>
-								</div>
-								<div class="col-auto">
-									<button type="button" class="btn btn-outline-light btn-sm"> Play Selection <svg class="bi bi-play-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z" /> </svg> </button> 
-								</div>
-							</div>
-						</form>
-					</div>
-					<div class="embed-responsive embed-responsive-16by9">
-						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/l4bDVq-nP-0" allowfullscreen></iframe> 
-					</div>
-				</div>
-				<div class="col-md-6">
-					<h3>
-						Selections from <a href="#">The Dick Cavett Show</a> 
-					</h3>
-					<div class="btn-group">
-						<a class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Sort by </a> 
-						<div class="dropdown-menu">
-							<a class="dropdown-item" href="#">Title, A-Z</a> <a class="dropdown-item" href="#">Title, Z-A</a> <a class="dropdown-item" href="#">Something else</a> 
-						</div>
-					</div>
-					<div class="card w-100 card-selection active">
-						<div class="card-body">
-							<h5 class="card-title">
-								Edit Selection Details 
-							</h5>
-							<form>
-								<div class="form-group">
-									<label for="sample1">Title</label> 
-									<input type="text" class="form-control" id="sample1" aria-describedby="emailHelp" placeholder="Dick Talks to Groucho Marx">
-								</div>
-								<div class="form-group">
-									<label for="sample2">Terms</label> 
-									<input type="text" class="form-control" id="sample2" placeholder="Cinema, Comedy">
-								</div>
-								<div class="form-group">
-									<label for="sample3">Tags</label> 
-									<input type="text" class="form-control" id="sample3" aria-describedby="emailHelp" placeholder="cabaret, Jewish, vaudeville">
-								</div>
-								<div class="form-group">
-									<label for="sample4">Notes</label> <textarea class="form-control" id="sample4" rows="3" placeholder="With supporting text below as a natural lead-in to additional content."></textarea> 
-								</div>
-								<button type="submit" class="btn btn-danger btn-sm float-right">Delete</button> <button type="submit" class="btn btn-secondary btn-sm">Cancel</button> <button type="submit" class="btn btn-primary btn-sm">Save</button> 
-							</form>
-						</div>
-					</div>
-					<div class="card w-100 card-selection">
-						<div class="card-body">
-							<h5 class="card-title">
-								From Film to Television 
-							</h5>
-							<p class="card-text">
-								With supporting text below as a natural lead-in to additional content. 
-							</p>
-							<a href="#" class="btn btn-secondary btn-sm">Edit</a> <a href="#" class="btn btn-secondary btn-sm">Copy</a> <a href="#" class="btn btn-primary btn-sm">View</a> 
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="tab-pane fade" id="pills-create" role="tabpanel" aria-labelledby="pills-create-tab">
-			<div class="row">
-				<div class="col-md-6">
-					<h3>
-						New Selection from <a href="#">The Dick Cavett Show</a> 
-					</h3>
-					<div class="toolbar-annotations toolbar-annotation p-3 bg-dark text-white">
-						<form>
-							<div class="form-row align-items-center">
-								<div class="col-sm-4">
-									<div class="input-group">
-										<div class="input-group-prepend">
-											<button type="button" class="btn btn-outline-light btn-sm"> Selection Start <svg class="bi bi-skip-backward-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M.5 3.5A.5.5 0 000 4v8a.5.5 0 001 0V4a.5.5 0 00-.5-.5z" clip-rule="evenodd" /> <path d="M.904 8.697l6.363 3.692c.54.313 1.233-.066 1.233-.697V4.308c0-.63-.692-1.01-1.233-.696L.904 7.304a.802.802 0 000 1.393z" /> <path d="M8.404 8.697l6.363 3.692c.54.313 1.233-.066 1.233-.697V4.308c0-.63-.693-1.01-1.233-.696L8.404 7.304a.802.802 0 000 1.393z" /> </svg> </button> 
-										</div>
-										<input type="text" class="form-control form-control-sm" id="inlineFormInputGroupUsername" placeholder="00:00:00">
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="input-group">
-										<div class="input-group-prepend">
-											<button type="button" class="btn btn-outline-light btn-sm"> Selection Stop <svg class="bi bi-skip-forward-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M15.5 3.5a.5.5 0 01.5.5v8a.5.5 0 01-1 0V4a.5.5 0 01.5-.5z" clip-rule="evenodd" /> <path d="M7.596 8.697l-6.363 3.692C.693 12.702 0 12.322 0 11.692V4.308c0-.63.693-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z" /> <path d="M15.096 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.693-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z" /> </svg> </button> 
-										</div>
-										<input type="text" class="form-control form-control-sm" id="inlineFormInputGroupUsername" placeholder="00:00:00">
-									</div>
-								</div>
-								<div class="col-auto">
-									<button type="button" class="btn btn-outline-light btn-sm"> Play Selection <svg class="bi bi-play-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z" /> </svg> </button> 
-								</div>
-							</div>
-						</form>
-					</div>
-					<div class="embed-responsive embed-responsive-16by9">
-						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/l4bDVq-nP-0" allowfullscreen></iframe> 
-					</div>
-				</div>
-				<div class="col-md-6">
-					<h3>
-						Additional Selection Information 
-					</h3>
-					<div class="card w-100 card-selection active">
-						<div class="card-body">
-							<h5 class="card-title">
-								Add Selection Details 
-							</h5>
-							<form>
-								<div class="form-group">
-									<label for="sample1">Title</label> 
-									<input type="text" class="form-control" id="sample1" aria-describedby="emailHelp" placeholder="">
-								</div>
-								<div class="form-group">
-									<label for="sample2">Terms</label> 
-									<input type="text" class="form-control" id="sample2" placeholder="">
-								</div>
-								<div class="form-group">
-									<label for="sample3">Tags</label> 
-									<input type="text" class="form-control" id="sample3" aria-describedby="emailHelp" placeholder="">
-								</div>
-								<div class="form-group">
-									<label for="sample4">Notes</label> <textarea class="form-control" id="sample4" rows="3" placeholder=""></textarea> 
-								</div>
-								<button type="submit" class="btn btn-primary btn-sm">Save</button> 
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+		</div>	</div>
 </div>
 <footer class="container-fluid"> 
 <hr />
@@ -480,7 +520,8 @@
 <p>
 <a href="#">Footer Link</a> &middot; <a href="#">Footer Link</a> 
 </p>
-</footer> </main> 
+</footer> 
+</main> 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
