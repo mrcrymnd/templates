@@ -1,0 +1,314 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Mediathread Splash Page </title>
+	<meta id="csrf-token" name="csrf-token" content="PTqVeCgKFYeC9Y1CvhKM4mhFsyG0C9tt4YZGavm6Tifm7uYi7xYt2z1ucbKAHa6Q">
+	<script src='https://ccnmtl-mediathread-static-prod.s3.amazonaws.com/media/jquery/js/jquery-3.6.0.min.js'>
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+	</script>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Montserrat:bold|Open+Sans|Open+Sans:bold" rel="stylesheet">
+	<script src='https://ccnmtl-mediathread-static-prod.s3.amazonaws.com/media/jquery/js/jquery-ui.min.js'>
+	</script>
+	<script src='https://ccnmtl-mediathread-static-prod.s3.amazonaws.com/media/jquery/js/jquery.mousewheel.min.js'>
+	</script>
+	<script src="https://ccnmtl-mediathread-static-prod.s3.amazonaws.com/media/js/mustache/mustache.min.js">
+	</script>
+	<script src="https://ccnmtl-mediathread-static-prod.s3.amazonaws.com/media/js/flowplayer/flowplayer.min.js">
+	</script>
+	<script src="https://ccnmtl-mediathread-static-prod.s3.amazonaws.com/media/js/lib/sherdjs/lib/OpenLayers-min.js">
+	</script>
+	<script src="/jsi18n">
+	</script>
+	<script src="https://browser.sentry-cdn.com/6.13.2/bundle.min.js" integrity="sha384-fcgCrdIqrZ6d6fA8EfCAfdjgN9wXDp0EOkueSo3bKyI3WM4tQCE0pOA/kJoqHYoI" crossorigin="anonymous">
+	</script>
+	<script>
+		if (typeof Sentry !== 'undefined') {
+		    Sentry.init({
+		        dsn: 'https://a22770cb4ac744bbaf2b1ec76281e7ed@sentry.io/102468',
+		        whitelistUrls: [/mediathread\.stage\.ctl\.columbia\.edu/]
+		    });
+		    
+		    Sentry.setUser({
+		        email: 'none',
+		        id: 'anonymous'
+		    });
+		    
+		}
+	</script>
+	<script src='https://ccnmtl-mediathread-static-prod.s3.amazonaws.com/media/js/app/extension_updater.js'>
+	</script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://ccnmtl-mediathread-static-prod.s3.amazonaws.com/media/jquery/css/jquery-ui.css" media="screen" />
+	<link rel="shortcut icon" href="https://ccnmtl-mediathread-static-prod.s3.amazonaws.com/media/img/mediathread_favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="https://ccnmtl-mediathread-static-prod.s3.amazonaws.com/media/CACHE/css/output.c0bf82a75c90.css" type="text/css" media="screen">
+	<link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/gambcgmmppeklfmbahomokogelnaffbi">
+	<link rel="stylesheet" href="https://search.sites.columbia.edu/cu-privacy-notice/cu-privacy-notice.css" />
+	<script src="https://search.sites.columbia.edu/cu-privacy-notice/cu-privacy-notice.js">
+	</script>
+	<!-new css -->
+	<style>
+	
+		#identity
+		{
+			background-image: url(images/tails-up.svg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-color: #000;
+		}
+		
+		#audience { 
+			background-image: url(images/tails-right.svg);
+			background-size: 1920px;
+			background-repeat: no-repeat;
+			background-position: right top;
+			background-color: #666;
+		}
+		
+		#features
+		{
+			background-image: url(images/tails-left.svg);
+			background-size: 1920px;
+			background-repeat: no-repeat;
+			background-position: left bottom;
+			background-color: #fff;
+		}            
+		
+    </style>
+</head>
+<body class="role-no-course">
+<div id="skip">
+	<a href="#pagecontent">Skip to main content</a> 
+</div>
+<div id="dialog-confirm" style="display: none">
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000;">
+	<a title="Mediathread" class="navbar-brand" href="/"> <img src='https://ccnmtl-mediathread-static-prod.s3.amazonaws.com/media/img/logo-mediathread-bgdark.svg' height="50" alt="Mediathread" /> </a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button> 
+	<div class="collapse navbar-collapse" id="navbarNavDropdown">
+		<ul class="navbar-nav w-100">
+<!-- Only show if not logged in -->
+			<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="public-navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Learn More </a> 
+			<div class="dropdown-menu" aria-labelledby="public-navbarDropdown">
+				<a class="dropdown-item" href="/about/">About Mediathread</a> <a class="dropdown-item" href="/testimonials/" style="display:none">Testimonials</a> <a class="dropdown-item" href="/history/">Mediathread History</a> 
+			</div>
+			</li>
+			<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="useMediathread-navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Use Mediathread </a> 
+			<div class="dropdown-menu" aria-labelledby="useMediathread-navbarDropdown">
+				<a class="dropdown-item" href="/features/">Features</a> <a class="dropdown-item" href="/usecases/">Use Cases</a> 
+			</div>
+			</li>
+			<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="getSupport-navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Get Support </a> 
+			<div class="dropdown-menu" aria-labelledby="getSupport-navbarDropdown">
+				<a class="dropdown-item" href="/faculty/" style="display:none">Faculty</a> <a class="dropdown-item" href="/students/" style="display:none">Students</a> <a class="dropdown-item" href="/kb/">Knowledge Base</a> <a class="dropdown-item" href="/contact/">Contact Us</a> 
+			</div>
+			</li>
+<!-- Only show if not logged in -->
+			<li class="nav-item"> <a class="nav-link" href="/getinvolved/" style="display:none"> Get Involved </a> </li>
+<!-- Logged in logic -->
+			<li class="nav-item dropdown ml-auto"> </li>
+			<li class="nav-item"> <a href="/accounts/register/" class="btn btn-outline-secondary" style="margin-right:.25em;">Sign Up</a> <a href="/accounts/login/" class="btn btn-outline-light">Sign In</a> </li>
+		</ul>
+	</div>
+</nav>
+<div role="main">
+
+        <h1 style="display: none;"">Mediathread</h1>
+        
+	    <!--identity-->
+	    <section id="identity" class="text-center p-5">
+	    <div class="container">
+	    <div class="row">
+	    <div class="col">
+	    <img class="img-fluid" alt="" src="images/logo-mediathread.svg">
+	    <h2 class="text-light display-4">Make original discoveries<br />through close analysis.</p>
+        <p> <a href="#" class="btn btn-light btn-lg">Learn More</a></p>
+	    </div>
+	    </div>
+	    </div>
+	    </section>
+	    
+	    <!--audience-->
+	    <section id="audience" class="text-center p-5 text-light">
+	    <div class="container">
+	    <div class="row">
+<h2>Mediathread is an innovative platform built by the Columbia CTL that supports collaborative
+multimedia analysis.</h2>
+	    <div class="col">
+	    <img class="img-fluid p-4" src="images/audience-instructors.jpg" />
+	    <h3>For Instructors</h3>
+	    <p>Engage students and track their work with a range of innovative assignments.</p>
+	    </div>
+	    <div class="col">
+	    <img class="img-fluid p-4" src="images/audience-students.jpg" />
+	    <h3>For Students</h3>
+	    <p>Back up insights with targeted citation of multimedia source materials.</p>
+	    </div>
+	    <div class="col">
+	    <img class="img-fluid p-4" src="images/audience-researchers.jpg" />
+	    <h3>For Researchers</h3>
+	    <p>Collaborate across digital collections with shared annotations, tagging, and controlled vocabularies.</p>
+	    </div>
+	    </div>
+	    </div>
+	    </section>
+	    
+	    <!--features-->
+	    <section id="features" class="text-center p-5 text-dark">
+	    <div class="container">
+	    <div class="row">
+	    <div class="col">
+	    <h2>
+Users of Mediathread are able to lift video, audio, and image items from a range of digital collections and then work with them in a course-specific website.
+	    </h2>
+	    </div>
+	    </div>
+	    </div>
+	    <div class="row">
+	    <div class="col">
+	    <img class="img-fluid p-4" src="https://dummyimage.com/1920x1080/eeeeee/666666.png&text=New+Screenshot" />
+	    <h2>Left</h2>
+	    <p>Engage students and track their work with a range of innovative assignments.</p>
+	    </div>
+	    <div class="col">
+	    <img class="img-fluid p-4" src="https://dummyimage.com/1920x1080/eeeeee/666666.png&text=New+Screenshot" />
+	    <h2>Center</h2>
+	    <p>Engage students and track their work with a range of innovative assignments.</p>
+	    </div>
+	    <div class="col">
+	    <img class="img-fluid p-4" src="https://dummyimage.com/1920x1080/eeeeee/666666.png&text=New+Screenshot" />
+	    <h2>Right</h2>
+	    <p>Engage students and track their work with a range of innovative assignments.</p>
+	    </div>
+	    </div>
+	    </div>
+	    </section>
+	    
+	    
+</div>
+<footer class="text-muted bg-light mt-5">
+	<ul class="footer-navigation d-print-none">
+		<li><a title="About page" href="/about/">About</a></li>
+		<li><a title="Contact page" href="/contact/">Contact</a></li>
+		<li><a title="Help page" href="/kb/">Help</a></li>
+		<li><a title="GitHub Repository" href="https://github.com/ccnmtl/mediathread">GitHub</a></li>
+	</ul>
+	<ul class="footer-logo row container mx-auto pt-4 pt-md-4 pt-lg-5">
+		<li class="col-md pb-4 px-0 py-md-0"> <a href="https://ctl.columbia.edu" target="_blank"> <img src="https://ccnmtl-mediathread-static-prod.s3.amazonaws.com/media/img/logo/logo-footer-ctl-print.svg" alt="Center for Teaching & Learning Print Logo" class="d-none d-print-block"> <img src="https://ccnmtl-mediathread-static-prod.s3.amazonaws.com/media/img/logo/logo-ctl-color.png" alt="Center for Teaching & Learning Logo" class="d-print-none"> </a> </li>
+	</ul>
+</footer>
+<script>
+	var STATIC_URL = 'https://ccnmtl-mediathread-static-prod.s3.amazonaws.com/media/';
+	
+	var lt = String.fromCharCode(60);
+	if (window.jQuery) {
+	    jQuery.noConflict();
+	}
+	
+	var MediaThread = new (function() {
+	    this.staticUrl = 'https://ccnmtl-mediathread-static-prod.s3.amazonaws.com/media/';
+	    this.templates = {};
+	    
+	
+	    
+	
+	    
+	
+	    this.tag_cache = {};
+	})();
+</script>
+<script src='https://ccnmtl-mediathread-static-prod.s3.amazonaws.com/media/js/lib/json2.js'>
+</script>
+<script src='https://ccnmtl-mediathread-static-prod.s3.amazonaws.com/media/js/app/util.js'>
+</script>
+<script src='https://ccnmtl-mediathread-static-prod.s3.amazonaws.com/media/js/app/ajaxDelete.js'>
+</script>
+<script src='https://ccnmtl-mediathread-static-prod.s3.amazonaws.com/media/js/app/analytics.js'>
+</script>
+<script src='https://ccnmtl-mediathread-static-prod.s3.amazonaws.com/media/js/app/mediathread_setup.js'>
+</script>
+<script src='https://ccnmtl-mediathread-static-prod.s3.amazonaws.com/media/js/app/panel.js'>
+</script>
+<!--  Asset related -->
+<script src='https://ccnmtl-mediathread-static-prod.s3.amazonaws.com/media/js/app/assetmgr/asset.js'>
+</script>
+<script src='https://ccnmtl-mediathread-static-prod.s3.amazonaws.com/media/js/app/assetmgr/assetpanel.js'>
+</script>
+<script type="module" src='https://ccnmtl-mediathread-static-prod.s3.amazonaws.com/media/js/app/assetmgr/collection.js'>
+</script>
+<!--  Discussion related -->
+<script src='https://ccnmtl-mediathread-static-prod.s3.amazonaws.com/media/js/app/discussion/discussionpanel.js'>
+</script>
+<!--  Project related -->
+<script src='https://ccnmtl-mediathread-static-prod.s3.amazonaws.com/media/js/app/projects/projectpanel.js'>
+</script>
+<script src='https://ccnmtl-mediathread-static-prod.s3.amazonaws.com/media/js/app/projects/projectlist.js'>
+</script>
+<script>
+	jQuery(document).ready(function() {
+	
+	    // setup some ajax progress indicator
+	    jQuery("html").ajaxStart(function() {
+	        jQuery(this).addClass("busy");
+	    })
+	    jQuery("html").ajaxStop(function() {
+	        jQuery(this).removeClass("busy");
+	    });
+	
+	    jQuery("div.settings_menu").click(function(evt) {
+	        evt.stopPropagation();
+	
+	        // close all other menus
+	        var opening = jQuery(this).hasClass("closed");
+	        jQuery("div.settings_submenu").hide();
+	        jQuery("div.settings_menu").removeClass("open").addClass("closed");
+	
+	        // open this one if needed
+	        if (opening) {
+	            jQuery(this).removeClass("closed").addClass("open");
+	            jQuery(this).nextAll("div.settings_submenu").toggle();
+	        }
+	    });
+	
+	    jQuery("body").click(function() {
+	        jQuery("div.settings_submenu").hide();
+	        jQuery("div.settings_menu").removeClass("open").addClass("closed");
+	        jQuery("a.switcher-top.menuopen").click();
+	    });
+	});
+</script>
+<script>
+	
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-311226-32']);
+	_gaq.push (['_gat._anonymizeIp']);
+	_gaq.push(['_trackPageview']);
+	
+	(function () {
+	    var ga = document.createElement('script');
+	    ga.type = 'text/javascript';
+	    ga.async = true;
+	    ga.src = ('https:' === document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0];
+	    s.parentNode.insertBefore(ga, s);
+	})();
+	
+	var analytics = new MediathreadAnalytics(_gaq);
+</script>
+<script type="text/javascript" src="https://columbiactl.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/-egccmf/b/24/a44af77267a987a660377e5c46e0fb64/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=0d06621d">
+</script>
+<script>
+	window.ATL_JQ_PAGE_PROPS = {
+	    "triggerFunction": function(showCollectorDialog) {
+	        jQuery("#report-a-bug").click(function(e) {
+	            e.preventDefault();
+	            showCollectorDialog();
+	        });
+	    }
+	 };
+</script>
+</body>
+</html>
